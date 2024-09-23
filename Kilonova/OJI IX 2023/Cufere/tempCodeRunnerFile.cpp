@@ -1,0 +1,2 @@
+
+    ifstream cin("cufere.in");
