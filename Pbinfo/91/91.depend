@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1702458793 source:d:\e\xia\probleme\91\main.cpp
+	<iostream>
+	<fstream>
+	<algorithm>
+
