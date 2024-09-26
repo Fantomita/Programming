@@ -1,0 +1,66 @@
+#include <iostream>
+
+using namespace std;
+
+struct nod{
+    int info;
+    nod * urm;
+};
+
+nod *p;
+int n, poz, v;
+
+void creare_lista(nod *&p)
+{
+    nod *u;
+
+    cout << "Numar elem lista: "; cin >> n;
+    if (p == NULL)
+    {
+        if (n)
+        {
+            p = new nod;
+            cout << "Elem 1: "; cin >> p->info;
+            p->urm = NULL;
+            u = p;
+        }
+        for (int i = 1; i < n; ++i)
+        {
+            nod *q = new nod;
+            cout << "Elem " << i + 1 << ": "; cin >> q->info;
+            u->urm = q;
+            u = q;
+        }
+        u->urm = NULL;
+    }
+    else
+    {
+        u = p;
+        for (int i = 1; i <= n; ++i)
+        {
+            nod *q = new nod;
+            cout << "Elem de adaugat : "; cin >> q->info;
+            u->urm = q;
+            u = q;
+        }
+    }
+    u->urm = NULL;
+}
+
+int numarare(nod * p)
+{
+    int nr = 0;
+    nod *q;
+
+    for (q = p; q->urm; q = q->urm)
+        if (q->info == q->urm->info) nr++;
+
+    return nr;
+}
+
+int main()
+{
+    creare_lista(p);
+    cout << numarare(p);
+    return 0;
+}
