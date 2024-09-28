@@ -1,0 +1,2 @@
+
+ofstream fout("atestat.out");
