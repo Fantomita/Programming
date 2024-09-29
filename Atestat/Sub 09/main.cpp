@@ -41,13 +41,8 @@ int main()
 
     for (int i = 1; i <= n; ++i, cout << '\n')
         for (int j = 1; j <= n; cout << a[i][j] << ' ', ++j)
-        {
             if (isPrime(a[i][j]))
                 fout << a[i][j] << ' ';
-        }
-
-
-
 
     return 0;
 }
