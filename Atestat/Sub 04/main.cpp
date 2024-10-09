@@ -14,7 +14,7 @@ bool allEvenDigits(int x)
             return false;
         x /= 10;
     } while (x);
-
+    
     return true;
 }
 

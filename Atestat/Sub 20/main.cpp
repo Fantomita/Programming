@@ -9,32 +9,31 @@ ofstream fout("atestat.out");
 
 void printAnagrams(char s[])
 {
-    char a[100][100], s1[100], s2[100];
+    char a[100][100];
     int n = 0;
 
     for (char *p = strtok(s, " "); p; p = strtok(nullptr, " "))
         strcpy(a[++n], p);
 
-
     for (int i = 1; i <= n; ++i)
         for (int j = i + 1; j <= n; ++j)
         {
-            int f1[27] = {}, f2[27] = {};
+            int f1[26] = {}, f2[26] = {};
 
-            strcpy(s1, a[i]);
-            strcpy(s2, a[j]);
+            char *s1 = a[i];
+            char *s2 = a[j];
 
             if (strlen(s1) != strlen(s2))
                 continue;
 
             for (int k = 0; k < strlen(s1); ++k)
             {
-                f1[(char)toupper(s1[k]) - 'A' + 1]++;
-                f2[(char)toupper(s2[k]) - 'A' + 1]++;
+                f1[(char)toupper(s1[k]) - 'A']++;
+                f2[(char)toupper(s2[k]) - 'A']++;
             }
 
             int ok = 1;
-            for (int k = 1; k <= 26; ++k)
+            for (int k = 0; k < 26; ++k)
             {
                 //cout << f1[k] << ' ' << f2[k] << '\n';
                 if (f1[k] != f2[k])
