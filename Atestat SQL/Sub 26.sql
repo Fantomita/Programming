@@ -1,7 +1,7 @@
 --a
 select * from elevi26
 --b
-select * from elevi26 order by clasa, nume
+select * from elevi26 order by clasa, nume, prenume
 --c
 if exists(select * from INFORMATION_SCHEMA.tables where TABLE_NAME='alocatii')
 	drop table alocatii
