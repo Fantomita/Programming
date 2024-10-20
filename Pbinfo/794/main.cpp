@@ -9,39 +9,49 @@ int main()
     cin >> n;
     for (i = 1; i <= n; ++i)
         for (j = 1; j <= n; ++j)
-            cin >> a[j][i];
+            cin >> a[i][j];
 
     for (d = 1; d <= n; ++d)
+    {
         if (d % 2 == 0)
         {
-            j = d;
+            for (i = d; i >= 1; --i)
+                cout << a[i][d - i + 1] << ' ';
+        }
+        else
+        {
             for (i = 1; i <= d; ++i)
-                cout << a[i][j--] << ' ';
+                cout << a[i][d - i + 1] << ' ';
         }
-        else
-        {
-            i = d;
-            for (j = 1; j <= d; ++j)
-                cout << a[i--][j] << ' ';
-        }
+    }
 
-    int k = 2;
-
-    for (; d <= 2 * n - 1; ++d)
-        if (d % 2 == 0)
+    for (d = 1; d < n; ++d)
+    {
+        if (n % 2 == 0)
         {
-            i = k;
-            for (j = n; i <= n; --j, ++i)
-                cout << a[i][j] << ' ';
-            ++k;
+            if (d % 2 == 0)
+            {
+                for (i = n; i > d; --i)
+                    cout << a[i][n - i + d + 1] << ' ';
+            }
+            else
+            {
+                for (i = d + 1; i <= n; ++i)
+                    cout << a[i][n - i + d + 1] << ' ';
+            }
         }
-        else
-        {
-            j = k;
-            for (i = n; j <= n; --i, ++j)
-                cout << a[i][j] << ' ';
-            ++k;
-        }
+        else 
+            if (d % 2)
+            {
+                for (i = n; i > d; --i)
+                    cout << a[i][n - i + d + 1] << ' ';
+            }
+            else
+            {
+                for (i = d + 1; i <= n; ++i)
+                    cout << a[i][n - i + d + 1] << ' ';
+            }
+    }
 
     return 0;
 }

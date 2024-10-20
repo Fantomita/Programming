@@ -4,20 +4,23 @@ using namespace std;
 
 int main()
 {
-    int a[21][21],n,i,j,sump=0,sums=0;
-    cin>>n;
-    for(int i=1;i<=n;i++)
-        for(int j=1;j<=n;j++)
+    int n, x, sP = 0, sS = 0;
+    cin >> n;
+
+    for (int i = 1; i <= n; ++i)
     {
-        cin>>a[i][j];
-        if(i==j)
-            sump+=a[i][j];
-        if(j==n-i+1)
-            sums+=a[i][j];
+        for (int j = 1; j <= n; ++j)
+        {
+            cin >> x;
+
+            if (i == j)
+                sP += x;
+            if (i + j == n + 1)
+                sS += x;
+        }
     }
-    if(sump>sums)
-        cout<<sump-sums;
-    else
-        cout<<sums-sump;
+
+    cout << abs(sP - sS);
+
     return 0;
 }
