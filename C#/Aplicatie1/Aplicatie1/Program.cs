@@ -27,13 +27,13 @@ namespace Aplicatie1
 
         const int MIN_ALL_UNDO = 416;
 
-            static void Main()
+        static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             IntPtr lHwnd = FindWindow("Shell_TrayWnd", null);
             SendMessage(lHwnd, WM_COMMAND, (IntPtr)MIN_ALL, IntPtr.Zero);
             Application.Run(new Form1());
-            }
+        }
     }
 }

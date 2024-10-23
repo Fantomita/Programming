@@ -17,6 +17,8 @@ namespace Aplicatie1
         Random rnd = new Random();
         int[] v = new int[5];
         Image[] img = new Image[5];
+        PictureBox firstClicked = null;
+        PictureBox secondClicked = null;
         public Form1()
         {
             InitializeComponent();
@@ -32,15 +34,18 @@ namespace Aplicatie1
                             ok = 0;
                 } while (ok == 0);
             }
-            img[1] = Image.FromFile("mar.jfif");
-            img[4] = Image.FromFile("mar.jfif");
-            img[2] = Image.FromFile("para.jpg");
-            img[3] = Image.FromFile("para.jpg");
-        }
 
+            img[1] = Image.FromFile("mar.png");
+            img[4] = Image.FromFile("mar.png");
+            img[2] = Image.FromFile("para.png");
+            img[3] = Image.FromFile("para.png");
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,47 +55,59 @@ namespace Aplicatie1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            nr++;
-            if (nr % 2 == 1)
-            {
-                pictureBox1.Image = img[v[1]];
-                x = v[2];
-            }
-            else
-            {
-                nr = 0;
-                if (x == v[4])
-                {
-                    pictureBox1.Visible = false;
-                    pictureBox4.Visible = false;
-                }
-                else
-                {
-                    pictureBox1.Image = null;
-                    pictureBox4.Image = null;
-                }
-            }
+            HandlePictureBoxClick(pictureBox1, 1);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            nr++;
-            if (nr % 2 == 1)
-                pictureBox2.Image = img[v[2]];
+            HandlePictureBoxClick(pictureBox2, 2);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            nr++;
-            if (nr % 2 == 1)
-                pictureBox3.Image = img[v[3]];
+            HandlePictureBoxClick(pictureBox3, 3);
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
+            HandlePictureBoxClick(pictureBox4, 4);
+        }
+
+        private async void HandlePictureBoxClick(PictureBox clickedPictureBox, int index)
+        {
             nr++;
+            //label3.Text = "Clicked on: " + index + " and the number of clicks is: " + nr;
             if (nr % 2 == 1)
-                pictureBox4.Image = img[v[4]];
+            {
+                clickedPictureBox.Image = img[v[index]];
+                firstClicked = clickedPictureBox;
+
+                x = index;
+            }
+
+            else
+            {
+                clickedPictureBox.Image = img[v[index]];
+                secondClicked = clickedPictureBox;
+
+                await Task.Delay(500);
+                if (v[x] == 5 - v[index])
+                {
+                    firstClicked.Visible = false;
+                    secondClicked.Visible = false;
+                }
+                else
+                {
+
+                    firstClicked.Image = null;
+                    secondClicked.Image = null;
+                }
+
+
+                firstClicked = null;
+                secondClicked = null;
+                nr = 0;
+            }   
         }
 
         private void timer1_Tick(object sender, EventArgs e)
