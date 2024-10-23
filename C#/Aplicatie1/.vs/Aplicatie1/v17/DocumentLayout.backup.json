@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{FBA41960-5AF8-4217-8E39-7B1EA17EC7F7}|Aplicatie1\\Aplicatie1.csproj|solutionrelative:aplicatie1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBA41960-5AF8-4217-8E39-7B1EA17EC7F7}|Aplicatie1\\Aplicatie1.csproj|D:\\Programming\\C#\\Aplicatie1\\aplicatie1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBA41960-5AF8-4217-8E39-7B1EA17EC7F7}|Aplicatie1\\Aplicatie1.csproj|solutionrelative:aplicatie1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBA41960-5AF8-4217-8E39-7B1EA17EC7F7}|Aplicatie1\\Aplicatie1.csproj|D:\\Programming\\C#\\Aplicatie1\\aplicatie1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FBA41960-5AF8-4217-8E39-7B1EA17EC7F7}|Aplicatie1\\Aplicatie1.csproj|solutionrelative:aplicatie1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBA41960-5AF8-4217-8E39-7B1EA17EC7F7}|Aplicatie1\\Aplicatie1.csproj|D:\\Programming\\C#\\Aplicatie1\\aplicatie1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBA41960-5AF8-4217-8E39-7B1EA17EC7F7}|Aplicatie1\\Aplicatie1.csproj|solutionrelative:aplicatie1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,16 +30,16 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Programming\\C#\\Aplicatie1\\Aplicatie1\\Form1.cs",
               "RelativeDocumentMoniker": "Aplicatie1\\Form1.cs",
-              "ToolTip": "D:\\Programming\\C#\\Aplicatie1\\Aplicatie1\\Form1.cs*",
-              "RelativeToolTip": "Aplicatie1\\Form1.cs*",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwC8AAABDAAAAAAAAAA==",
+              "ToolTip": "D:\\Programming\\C#\\Aplicatie1\\Aplicatie1\\Form1.cs",
+              "RelativeToolTip": "Aplicatie1\\Form1.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAADwv4QAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T13:14:06.181Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Programming\\C#\\Aplicatie1\\Aplicatie1\\Program.cs",
               "RelativeDocumentMoniker": "Aplicatie1\\Program.cs",
@@ -47,17 +47,16 @@
               "RelativeToolTip": "Aplicatie1\\Program.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAQwCIAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T13:14:05.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T13:14:05.958Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\Programming\\C#\\Aplicatie1\\Aplicatie1\\Form1.cs",
               "RelativeDocumentMoniker": "Aplicatie1\\Form1.cs",
-              "ToolTip": "D:\\Programming\\C#\\Aplicatie1\\Aplicatie1\\Form1.cs [Design]*",
-              "RelativeToolTip": "Aplicatie1\\Form1.cs [Design]*",
+              "ToolTip": "D:\\Programming\\C#\\Aplicatie1\\Aplicatie1\\Form1.cs [Design]",
+              "RelativeToolTip": "Aplicatie1\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T13:14:06.431Z",
               "EditorCaption": " [Design]"
