@@ -1,0 +1,7 @@
+D:\Programming\C#\freeCodeCamp\Exercise2\Exercise2\bin\Debug\Exercise2.exe.config
+D:\Programming\C#\freeCodeCamp\Exercise2\Exercise2\bin\Debug\Exercise2.exe
+D:\Programming\C#\freeCodeCamp\Exercise2\Exercise2\bin\Debug\Exercise2.pdb
+D:\Programming\C#\freeCodeCamp\Exercise2\Exercise2\obj\Debug\Exercise2.csproj.AssemblyReference.cache
+D:\Programming\C#\freeCodeCamp\Exercise2\Exercise2\obj\Debug\Exercise2.csproj.CoreCompileInputs.cache
+D:\Programming\C#\freeCodeCamp\Exercise2\Exercise2\obj\Debug\Exercise2.exe
+D:\Programming\C#\freeCodeCamp\Exercise2\Exercise2\obj\Debug\Exercise2.pdb
