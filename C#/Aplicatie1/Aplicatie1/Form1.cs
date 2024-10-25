@@ -35,14 +35,10 @@ namespace Aplicatie1
                 } while (ok == 0);
             }
 
-            img[1] = Image.FromFile("mar.png");
-            img[8] = Image.FromFile("mar.png");
-            img[2] = Image.FromFile("para.png");
-            img[7] = Image.FromFile("para.png");
-            img[3] = Image.FromFile("struguri.png");
-            img[6] = Image.FromFile("struguri.png");
-            img[4] = Image.FromFile("banana.png");
-            img[5] = Image.FromFile("banana.png");
+            img[1] = img[8] = Image.FromFile("mar.png");
+            img[2] = img[7] = Image.FromFile("para.png");
+            img[3] = img[6] = Image.FromFile("struguri.png");
+            img[4] = img[5] = Image.FromFile("banana.png");
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -128,7 +124,6 @@ namespace Aplicatie1
                 }
                 else
                 {
-
                     firstClicked.Image = null;
                     secondClicked.Image = null;
                 }
