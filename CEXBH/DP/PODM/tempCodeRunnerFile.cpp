@@ -1,0 +1,2 @@
+
+    ofstream cout("podm.out");
