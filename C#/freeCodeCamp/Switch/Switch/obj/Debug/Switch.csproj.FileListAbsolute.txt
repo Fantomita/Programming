@@ -1,0 +1,7 @@
+D:\Programming\C#\freeCodeCamp\Switch\Switch\obj\Debug\Switch.csproj.AssemblyReference.cache
+D:\Programming\C#\freeCodeCamp\Switch\Switch\obj\Debug\Switch.csproj.CoreCompileInputs.cache
+D:\Programming\C#\freeCodeCamp\Switch\Switch\bin\Debug\Switch.exe.config
+D:\Programming\C#\freeCodeCamp\Switch\Switch\bin\Debug\Switch.exe
+D:\Programming\C#\freeCodeCamp\Switch\Switch\bin\Debug\Switch.pdb
+D:\Programming\C#\freeCodeCamp\Switch\Switch\obj\Debug\Switch.exe
+D:\Programming\C#\freeCodeCamp\Switch\Switch\obj\Debug\Switch.pdb

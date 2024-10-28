@@ -1,0 +1,7 @@
+D:\Programming\C#\freeCodeCamp\ConsoleIO\ConsoleIO\bin\Debug\ConsoleIO.exe.config
+D:\Programming\C#\freeCodeCamp\ConsoleIO\ConsoleIO\bin\Debug\ConsoleIO.exe
+D:\Programming\C#\freeCodeCamp\ConsoleIO\ConsoleIO\bin\Debug\ConsoleIO.pdb
+D:\Programming\C#\freeCodeCamp\ConsoleIO\ConsoleIO\obj\Debug\ConsoleIO.csproj.AssemblyReference.cache
+D:\Programming\C#\freeCodeCamp\ConsoleIO\ConsoleIO\obj\Debug\ConsoleIO.csproj.CoreCompileInputs.cache
+D:\Programming\C#\freeCodeCamp\ConsoleIO\ConsoleIO\obj\Debug\ConsoleIO.exe
+D:\Programming\C#\freeCodeCamp\ConsoleIO\ConsoleIO\obj\Debug\ConsoleIO.pdb
