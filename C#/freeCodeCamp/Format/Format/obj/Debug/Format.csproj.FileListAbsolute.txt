@@ -1,0 +1,7 @@
+D:\Programming\C#\freeCodeCamp\Format\Format\obj\Debug\Format.csproj.AssemblyReference.cache
+D:\Programming\C#\freeCodeCamp\Format\Format\obj\Debug\Format.csproj.CoreCompileInputs.cache
+D:\Programming\C#\freeCodeCamp\Format\Format\bin\Debug\Format.exe.config
+D:\Programming\C#\freeCodeCamp\Format\Format\bin\Debug\Format.exe
+D:\Programming\C#\freeCodeCamp\Format\Format\bin\Debug\Format.pdb
+D:\Programming\C#\freeCodeCamp\Format\Format\obj\Debug\Format.exe
+D:\Programming\C#\freeCodeCamp\Format\Format\obj\Debug\Format.pdb

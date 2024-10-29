@@ -1,0 +1,7 @@
+D:\Programming\C#\freeCodeCamp\ConditionalOperator\ConditionalOperator\bin\Debug\ConditionalOperator.exe.config
+D:\Programming\C#\freeCodeCamp\ConditionalOperator\ConditionalOperator\bin\Debug\ConditionalOperator.exe
+D:\Programming\C#\freeCodeCamp\ConditionalOperator\ConditionalOperator\bin\Debug\ConditionalOperator.pdb
+D:\Programming\C#\freeCodeCamp\ConditionalOperator\ConditionalOperator\obj\Debug\ConditionalOperator.csproj.AssemblyReference.cache
+D:\Programming\C#\freeCodeCamp\ConditionalOperator\ConditionalOperator\obj\Debug\ConditionalOperator.csproj.CoreCompileInputs.cache
+D:\Programming\C#\freeCodeCamp\ConditionalOperator\ConditionalOperator\obj\Debug\ConditionalOperator.exe
+D:\Programming\C#\freeCodeCamp\ConditionalOperator\ConditionalOperator\obj\Debug\ConditionalOperator.pdb

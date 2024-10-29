@@ -1,0 +1,7 @@
+C:\Users\Vlad\source\repos\Constants\Constants\obj\Debug\Constants.csproj.AssemblyReference.cache
+C:\Users\Vlad\source\repos\Constants\Constants\obj\Debug\Constants.csproj.CoreCompileInputs.cache
+C:\Users\Vlad\source\repos\Constants\Constants\bin\Debug\Constants.exe.config
+C:\Users\Vlad\source\repos\Constants\Constants\bin\Debug\Constants.exe
+C:\Users\Vlad\source\repos\Constants\Constants\bin\Debug\Constants.pdb
+C:\Users\Vlad\source\repos\Constants\Constants\obj\Debug\Constants.exe
+C:\Users\Vlad\source\repos\Constants\Constants\obj\Debug\Constants.pdb

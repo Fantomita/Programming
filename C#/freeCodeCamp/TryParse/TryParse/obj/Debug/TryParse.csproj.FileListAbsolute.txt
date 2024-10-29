@@ -1,0 +1,7 @@
+D:\Programming\C#\freeCodeCamp\TryParse\TryParse\bin\Debug\TryParse.exe.config
+D:\Programming\C#\freeCodeCamp\TryParse\TryParse\bin\Debug\TryParse.exe
+D:\Programming\C#\freeCodeCamp\TryParse\TryParse\bin\Debug\TryParse.pdb
+D:\Programming\C#\freeCodeCamp\TryParse\TryParse\obj\Debug\TryParse.csproj.AssemblyReference.cache
+D:\Programming\C#\freeCodeCamp\TryParse\TryParse\obj\Debug\TryParse.csproj.CoreCompileInputs.cache
+D:\Programming\C#\freeCodeCamp\TryParse\TryParse\obj\Debug\TryParse.exe
+D:\Programming\C#\freeCodeCamp\TryParse\TryParse\obj\Debug\TryParse.pdb
