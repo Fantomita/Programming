@@ -1,0 +1,11 @@
+10
+baschet
+volei
+fotbal
+ski
+patinaj
+tenis
+polo
+batminton
+golf
+formula1
