@@ -10,3 +10,15 @@ D:\E\XIIA\Lazau Luca\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.csproj.
 D:\E\XIIA\Lazau Luca\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.csproj.CoreCompileInputs.cache
 D:\E\XIIA\Lazau Luca\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.exe
 D:\E\XIIA\Lazau Luca\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.pdb
+D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\bin\Debug\Spanzuratoare.exe.config
+D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\bin\Debug\Spanzuratoare.exe
+D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\bin\Debug\Spanzuratoare.pdb
+D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.csproj.AssemblyReference.cache
+D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.csproj.SuggestedBindingRedirects.cache
+D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.Form1.resources
+D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.Form2.resources
+D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.Properties.Resources.resources
+D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.csproj.GenerateResource.cache
+D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.csproj.CoreCompileInputs.cache
+D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.exe
+D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.pdb
