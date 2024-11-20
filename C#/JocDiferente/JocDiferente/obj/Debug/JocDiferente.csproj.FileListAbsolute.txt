@@ -32,3 +32,14 @@ C:\Users\E\Downloads\JocDiferente\JocDiferente\obj\Debug\JocDiferente.csproj.Gen
 C:\Users\E\Downloads\JocDiferente\JocDiferente\obj\Debug\JocDiferente.csproj.CoreCompileInputs.cache
 C:\Users\E\Downloads\JocDiferente\JocDiferente\obj\Debug\JocDiferente.exe
 C:\Users\E\Downloads\JocDiferente\JocDiferente\obj\Debug\JocDiferente.pdb
+D:\Programming\C#\JocDiferente\JocDiferente\bin\Debug\JocDiferente.exe.config
+D:\Programming\C#\JocDiferente\JocDiferente\bin\Debug\JocDiferente.exe
+D:\Programming\C#\JocDiferente\JocDiferente\bin\Debug\JocDiferente.pdb
+D:\Programming\C#\JocDiferente\JocDiferente\obj\Debug\JocDiferente.csproj.AssemblyReference.cache
+D:\Programming\C#\JocDiferente\JocDiferente\obj\Debug\JocDiferente.Form1.resources
+D:\Programming\C#\JocDiferente\JocDiferente\obj\Debug\JocDiferente.Form2.resources
+D:\Programming\C#\JocDiferente\JocDiferente\obj\Debug\JocDiferente.Properties.Resources.resources
+D:\Programming\C#\JocDiferente\JocDiferente\obj\Debug\JocDiferente.csproj.GenerateResource.cache
+D:\Programming\C#\JocDiferente\JocDiferente\obj\Debug\JocDiferente.csproj.CoreCompileInputs.cache
+D:\Programming\C#\JocDiferente\JocDiferente\obj\Debug\JocDiferente.exe
+D:\Programming\C#\JocDiferente\JocDiferente\obj\Debug\JocDiferente.pdb
