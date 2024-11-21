@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit">Login</button>
         </form>
     </div>
-    <footer>
+    <footer onclick="window.location.href='../games/index.php'">
         <p>Created by Luncan Vlad-Cosmin &copy; 2024</p>
     </footer>
 </body>

@@ -28,12 +28,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $newCategoryName = $_POST['new_category_name'] ?? null;
 
     // Handle file upload
+    $codeFilePath = '';  // Default empty path
+
     if (isset($_FILES['code_file']) && $_FILES['code_file']['error'] == UPLOAD_ERR_OK) {
         $uploadedFile = $_FILES['code_file'];
-        $codeFilePath = '../code/' . basename($uploadedFile['name']);
-        move_uploaded_file($uploadedFile['tmp_name'], $codeFilePath);
+        $extension = pathinfo($uploadedFile['name'], PATHINFO_EXTENSION); // Get file extension
+        $uniqueHash = bin2hex(random_bytes(16)); // Generate a unique hash
+        $newFileName = '/var/www/code/' . $uniqueHash . '.' . $extension;  // Use absolute path
+    
+        // Debugging file upload
+        echo "Upload error code: " . $_FILES['code_file']['error'] . "<br>";
+        echo "Temporary file: " . $_FILES['code_file']['tmp_name'] . "<br>";
+        echo "Destination file: " . $newFileName . "<br>";
+
+        // Attempt to move the file
+        if (move_uploaded_file($uploadedFile['tmp_name'], $newFileName)) {
+            $codeFilePath = $newFileName;  // Save the new file path in the database
+            echo "File uploaded successfully!<br>";
+        } else {
+            echo "Error uploading file: " . $_FILES['code_file']['error'] . "<br>";
+        }
     } else {
-        $codeFilePath = '';  // If no file is uploaded, use empty string
+        echo "No file uploaded or error in file upload: " . $_FILES['code_file']['error'] . "<br>";
     }
 
     try {

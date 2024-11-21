@@ -22,6 +22,13 @@ try {
         echo "Problem not found.";
         exit;
     }
+
+    // Check if there's a file and read it
+    if (!empty($writeup['code_file']) && file_exists($writeup['code_file'])) {
+        $fileContent = file_get_contents($writeup['code_file']);
+    } else {
+        $fileContent = '';  // If no file is found, use empty string
+    }
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
     exit;
@@ -66,12 +73,15 @@ try {
         <p><?= nl2br(htmlspecialchars($writeup['description'])) ?></p>
         
         <h2>Solution Code</h2>
-        <pre><code class="language-<?= htmlspecialchars($writeup['language']) ?>">
-<?php
-    // Display the solution code directly
-    echo htmlspecialchars($writeup['code_text']);
-?>
-        </code></pre>
+        <?php if (!empty($fileContent)): ?>
+            <!-- Display file content if it exists -->
+            <pre><code class="language-<?= htmlspecialchars($writeup['language']) ?>"><?= htmlspecialchars($fileContent) ?></code></pre>
+        <?php elseif (!empty($writeup['code_text'])): ?>
+            <!-- Display text content if no file -->
+            <pre><code class="language-<?= htmlspecialchars($writeup['language']) ?>"><?= htmlspecialchars($writeup['code_text']) ?></code></pre>
+        <?php else: ?>
+            <p>No code available.</p>
+        <?php endif; ?>
     </div>
     <footer>
         <p>Created by Luncan Vlad-Cosmin &copy; 2024</p>

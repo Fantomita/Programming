@@ -37,7 +37,17 @@ if (isset($_GET['id'])) {
         $pdo = new PDO('sqlite:/var/www/db/problems.db');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // Prepare the delete statement
+        // Fetch the file path associated with the problem (if exists)
+        $stmt = $pdo->prepare('SELECT code_file FROM "write_ups" WHERE id = ?');
+        $stmt->execute([$problem_id]);
+        $problem = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // If the problem exists and has an associated code file, delete the file
+        if ($problem && !empty($problem['code_file']) && file_exists($problem['code_file'])) {
+            unlink($problem['code_file']);  // Delete the file from the server
+        }
+
+        // Prepare the delete statement to delete the problem from the database
         $stmt = $pdo->prepare('DELETE FROM "write_ups" WHERE id = ?');
         $stmt->execute([$problem_id]);
 
