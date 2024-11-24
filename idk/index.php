@@ -2,7 +2,6 @@
 session_start();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,9 +29,10 @@ session_start();
                 $pdo = new PDO('sqlite:db/users.db'); // Adjust path if needed
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                // Get the user's admin status from the database
-                $stmt = $pdo->prepare("SELECT is_admin FROM users WHERE username = ?");
-                $stmt->execute([$username]);
+                // Get the user's admin status from the database securely
+                $stmt = $pdo->prepare("SELECT is_admin FROM users WHERE username = :username");
+                $stmt->bindParam(':username', $username, PDO::PARAM_STR); // Bind parameters to avoid SQL injection
+                $stmt->execute();
                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
                 if ($user && $user['is_admin'] == 1) {
@@ -40,7 +40,9 @@ session_start();
                     echo '<a href="/login/admin.php">Admin Panel</a>';
                 }
             } catch (PDOException $e) {
-                echo "Error: " . $e->getMessage();
+                // Log the error in production but don't expose detailed information to the user
+                error_log("Database error: " . $e->getMessage()); // Log the error for debugging
+                echo "An error occurred, please try again later."; // Generic error message for users
             }
         }
         ?>

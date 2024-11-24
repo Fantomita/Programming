@@ -23,33 +23,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $link = $_POST['link'];
     $description = $_POST['description'];
     $language = $_POST['language'];
-    $codeText = $_POST['code_text'] ?? ''; // Code entered directly in text box
+    $codeText = $_POST['code_text'] ?? '';
     $selectedCategory = $_POST['category'];
     $newCategoryName = $_POST['new_category_name'] ?? null;
 
     // Handle file upload
-    $codeFilePath = '';  // Default empty path
+    $codeFilePath = '';
 
     if (isset($_FILES['code_file']) && $_FILES['code_file']['error'] == UPLOAD_ERR_OK) {
         $uploadedFile = $_FILES['code_file'];
-        $extension = pathinfo($uploadedFile['name'], PATHINFO_EXTENSION); // Get file extension
-        $uniqueHash = bin2hex(random_bytes(16)); // Generate a unique hash
-        $newFileName = '/var/www/code/' . $uniqueHash . '.' . $extension;  // Use absolute path
+        $extension = pathinfo($uploadedFile['name'], PATHINFO_EXTENSION);
+        $uniqueHash = bin2hex(random_bytes(16));
+        $newFileName = '/var/www/code/' . $uniqueHash . '.' . $extension;
     
-        // Debugging file upload
-        echo "Upload error code: " . $_FILES['code_file']['error'] . "<br>";
-        echo "Temporary file: " . $_FILES['code_file']['tmp_name'] . "<br>";
-        echo "Destination file: " . $newFileName . "<br>";
-
-        // Attempt to move the file
         if (move_uploaded_file($uploadedFile['tmp_name'], $newFileName)) {
-            $codeFilePath = $newFileName;  // Save the new file path in the database
-            echo "File uploaded successfully!<br>";
-        } else {
-            echo "Error uploading file: " . $_FILES['code_file']['error'] . "<br>";
+            $codeFilePath = $newFileName;
         }
-    } else {
-        echo "No file uploaded or error in file upload: " . $_FILES['code_file']['error'] . "<br>";
     }
 
     try {
@@ -57,15 +46,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($selectedCategory === 'new' && $newCategoryName) {
             $stmt = $pdo->prepare("INSERT INTO categories (name) VALUES (?)");
             $stmt->execute([$newCategoryName]);
-            $selectedCategory = $pdo->lastInsertId(); // Get the ID of the new category
+            $selectedCategory = $pdo->lastInsertId();
         }
 
-        // Insert new write-up into the write_ups table
+        // Insert new write-up
         $stmt = $pdo->prepare("INSERT INTO write_ups (title, link, description, code_file, code_text, language, category_id) 
-                               VALUES (?, ?, ?, ?, ?, ?, ?)");
+                              VALUES (?, ?, ?, ?, ?, ?, ?)");
         $stmt->execute([$title, $link, $description, $codeFilePath, $codeText, $language, $selectedCategory]);
 
-        // Redirect to the problem list or a success page after inserting
+        // Redirect after successful insertion
         header('Location: problems.php');
         exit;
     } catch (PDOException $e) {
@@ -81,6 +70,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Write-Up</title>
     <link rel="stylesheet" href="../styles/main.css">
+    <!-- SimpleMDE CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <!-- SimpleMDE JS -->
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
     <script>
         function toggleNewCategoryInput() {
             const categorySelect = document.getElementById('category');
@@ -121,8 +114,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="link">Problem Link (URL to problem):</label>
             <input type="text" name="link" id="link" required><br>
 
-            <label for="description">Detailed Description:</label>
-            <textarea name="description" id="description" required></textarea><br>
+            <label for="description">Detailed Description (Markdown Supported):</label>
+            <textarea name="description" id="description" style="display: block;"></textarea><br>
 
             <label for="code_file">Solution File (optional):</label>
             <input type="file" name="code_file" id="code_file"><br>
@@ -156,6 +149,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit">Submit Write-Up</button>
         </form>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Make sure the textarea exists and is visible before initializing SimpleMDE
+            const descriptionTextarea = document.getElementById('description');
+            if (descriptionTextarea) {
+                // Initialize SimpleMDE with basic configuration
+                const simplemde = new SimpleMDE({
+                    element: descriptionTextarea,
+                    forceSync: true // Force sync with original textarea on change
+                });
+            }
+        });
+    </script>
+
     <footer>
         <p>Created by Luncan Vlad-Cosmin &copy; 2024</p>
     </footer>
