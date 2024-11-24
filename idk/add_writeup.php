@@ -88,6 +88,114 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
     </script>
+
+    <!-- Add the same styles for SimpleMDE editor -->
+    <style>
+        /* Markdown Preview Styles for SimpleMDE */
+        .editor-preview,
+        .editor-preview-side {
+            white-space: normal; /* Normal white-space for better wrapping */
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            padding: 15px; /* Slightly reduced padding */
+            background-color: #1E1E1E;
+            border-radius: 5px;
+            color: #ffffff;
+            line-height: 1.4; /* Adjusted line height for readability */
+        }
+
+        .editor-preview p,
+        .editor-preview-side p {
+            margin: 0.8em 0; /* Slightly reduced margin */
+        }
+
+        .editor-preview pre,
+        .editor-preview-side pre {
+            background-color: #2d2d2d;
+            padding: 10px; /* Reduced padding */
+            margin: 0.8em 0; /* Reduced margin */
+            border-radius: 4px;
+            white-space: pre;
+        }
+
+        .editor-preview code,
+        .editor-preview-side code {
+            background-color: #2d2d2d; /* Highlight inline code */
+            padding: 2px 4px;
+            border-radius: 3px;
+            color: #dcdcaa;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 90%; /* Slightly smaller for inline */
+        }
+
+        .editor-preview h1,
+        .editor-preview-side h1,
+        .editor-preview h2,
+        .editor-preview-side h2,
+        .editor-preview h3,
+        .editor-preview-side h3,
+        .editor-preview h4,
+        .editor-preview-side h4,
+        .editor-preview h5,
+        .editor-preview-side h5,
+        .editor-preview h6,
+        .editor-preview-side h6 {
+            margin-top: 1.2em;
+            margin-bottom: 0.4em; /* Compact spacing */
+            font-weight: bold;
+        }
+
+        .editor-preview blockquote,
+        .editor-preview-side blockquote {
+            border-left: 3px solid #444;
+            margin: 1em 0;
+            padding-left: 1em;
+            color: #aaa;
+            font-style: italic;
+        }
+
+        .editor-preview ul,
+        .editor-preview-side ul,
+        .editor-preview ol,
+        .editor-preview-side ol {
+            padding-left: 1.5em; /* Reduced indentation */
+            margin: 0.8em 0; /* Compact spacing */
+        }
+
+        .editor-preview li,
+        .editor-preview-side li {
+            margin: 0.4em 0; /* Compact spacing for list items */
+        }
+
+        .editor-preview table,
+        .editor-preview-side table {
+            border-collapse: collapse;
+            margin: 1em 0;
+            width: 100%;
+            border: 1px solid #444; /* Added border for tables */
+        }
+
+        .editor-preview th,
+        .editor-preview-side th,
+        .editor-preview td,
+        .editor-preview-side td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #444;
+        }
+
+        .editor-preview th,
+        .editor-preview-side th {
+            background-color: #2d2d2d;
+        }
+
+        .editor-preview hr,
+        .editor-preview-side hr {
+            border: none;
+            border-top: 1px solid #444;
+            margin: 1.5em 0; /* Reduced margin for compactness */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -115,6 +223,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="text" name="link" id="link" required><br>
 
             <label for="description">Detailed Description (Markdown Supported):</label>
+            <!-- SimpleMDE Markdown Editor -->
             <textarea name="description" id="description" style="display: block;"></textarea><br>
 
             <label for="code_file">Solution File (optional):</label>
@@ -152,13 +261,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Make sure the textarea exists and is visible before initializing SimpleMDE
             const descriptionTextarea = document.getElementById('description');
             if (descriptionTextarea) {
-                // Initialize SimpleMDE with basic configuration
                 const simplemde = new SimpleMDE({
                     element: descriptionTextarea,
-                    forceSync: true // Force sync with original textarea on change
+                    forceSync: true,
+                    spellChecker: false,
                 });
             }
         });

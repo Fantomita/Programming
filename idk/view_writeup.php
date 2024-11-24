@@ -38,8 +38,12 @@ try {
     require_once '/var/www/libs/Parsedown.php';
     $parsedown = new Parsedown();
 
-    // Parse only the description as Markdown, not the code
+    // Configure Parsedown to preserve line breaks
+    $parsedown->setBreaksEnabled(true);
+
+    // Parse the description as Markdown
     $descriptionHtml = $parsedown->text($writeup['description']);
+
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
     exit;
@@ -53,17 +57,16 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solution: <?= htmlspecialchars($writeup['title']) ?></title>
     <link rel="stylesheet" href="../styles/main.css">
-    <!-- highlight.js CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs-dark.min.css">
-    <!-- highlight.js JavaScript -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-    <!-- Add C++ language support -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Initialize highlight.js
             hljs.configure({
-                languages: ['cpp', 'python', 'java', 'javascript']  // Add languages you need
+                languages: ['cpp', 'python', 'java', 'javascript']
             });
             hljs.highlightAll();
 
@@ -84,10 +87,19 @@ try {
         });
     </script>
     <style>
+        /* General Layout Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Code Container Styles */
         .code-container {
             position: relative;
             margin: 20px 0;
         }
+
         .copy-button {
             position: absolute;
             top: 10px;
@@ -101,9 +113,11 @@ try {
             font-size: 12px;
             z-index: 100;
         }
+
         .copy-button:hover {
             background-color: #0056b3;
         }
+
         pre {
             margin: 0;
             padding: 20px;
@@ -111,11 +125,14 @@ try {
             background-color: #1E1E1E;
             overflow-x: auto;
         }
+
         code {
             font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
             font-size: 14px;
             line-height: 1.5;
         }
+
+        /* Button Styles */
         .edit-button {
             display: inline-block;
             margin-top: 20px;
@@ -126,9 +143,11 @@ try {
             border-radius: 5px;
             font-size: 14px;
         }
+
         .edit-button:hover {
             background-color: #218838;
         }
+
         .delete-button {
             display: inline-block;
             margin-top: 20px;
@@ -140,13 +159,102 @@ try {
             border-radius: 5px;
             font-size: 14px;
         }
+
         .delete-button:hover {
             background-color: #c82333;
         }
+
         .admin-buttons {
             margin-top: 20px;
             margin-bottom: 20px;
         }
+
+.description-pre {
+    white-space: normal; /* Normal white-space for better wrapping */
+    overflow-x: auto;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    padding: 15px; /* Slightly reduced padding */
+    background-color: #1E1E1E;
+    border-radius: 5px;
+    color: #ffffff;
+    line-height: 1.4; /* Adjusted line height for readability */
+}
+
+.description-pre p {
+    margin: 0.8em 0; /* Slightly reduced margin */
+}
+
+.description-pre pre {
+    background-color: #2d2d2d;
+    padding: 10px; /* Reduced padding */
+    margin: 0.8em 0; /* Reduced margin */
+    border-radius: 4px;
+    white-space: pre;
+}
+
+.description-pre code {
+    background-color: #2d2d2d; /* Highlight inline code */
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: #dcdcaa;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 90%; /* Slightly smaller for inline */
+}
+
+.description-pre h1,
+.description-pre h2,
+.description-pre h3,
+.description-pre h4,
+.description-pre h5,
+.description-pre h6 {
+    margin-top: 1.2em;
+    margin-bottom: 0.4em; /* Compact spacing */
+    font-weight: bold;
+}
+
+.description-pre blockquote {
+    border-left: 3px solid #444;
+    margin: 1em 0;
+    padding-left: 1em;
+    color: #aaa;
+    font-style: italic;
+}
+
+.description-pre ul,
+.description-pre ol {
+    padding-left: 1.5em; /* Reduced indentation */
+    margin: 0.8em 0; /* Compact spacing */
+}
+
+.description-pre li {
+    margin: 0.4em 0; /* Compact spacing for list items */
+}
+
+.description-pre table {
+    border-collapse: collapse;
+    margin: 1em 0;
+    width: 100%;
+    border: 1px solid #444; /* Added border for tables */
+}
+
+.description-pre th,
+.description-pre td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #444;
+}
+
+.description-pre th {
+    background-color: #2d2d2d;
+}
+
+.description-pre hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 1.5em 0; /* Reduced margin for compactness */
+}
+
+
     </style>
 </head>
 <body>
@@ -157,7 +265,7 @@ try {
         <a href="../index.php">Home</a>
         <a href="../problems.php">Problems</a>
         <a href="../about.php">About</a>
-        
+
         <?php
         if (isset($_SESSION['user'])) {
             echo '<a href="/login/logout.php">Logout</a>';
@@ -169,12 +277,12 @@ try {
     <div class="container">
         <h2>Problem Link</h2>
         <a href="<?= htmlspecialchars($writeup['link']) ?>" target="_blank"><?= htmlspecialchars($writeup['link']) ?></a>
-        
-        <h2>Problem Description</h2>
-        <div>
+
+        <h2 class="problem-description">Problem Description</h2>
+        <div class="description-pre">
             <?= $descriptionHtml ?>
         </div>
-        
+
         <h2>Solution Code</h2>
         <?php if (!empty($fileContent)): ?>
             <div class="code-container">
