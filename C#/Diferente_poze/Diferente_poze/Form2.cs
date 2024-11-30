@@ -12,22 +12,38 @@ namespace Diferente_poze
 {
     public partial class Form2 : Form
     {
-        int nr = 0, ok1 = 0, ok2 = 0, ok3 = 0, ok4 = 0, ok5 = 0, n = 5, t = 10;
+        int nr = 0, ok1 = 0, ok2 = 0, ok3 = 0, ok4 = 0, ok5 = 0, ok6 = 0, ok7 = 0, ok8 = 0, n = 8, t = 60;
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public Form2()
         {
             InitializeComponent();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            label2.Text = "Time left: " + t.ToString();
+
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
             t--;
-            if (t < 0 && nr < n)
+            if(t <= 0 && nr < n)
             {
-                label1.Left -= 80;
-                label1.Text = "You lost! Try again!";
-                timer1.Stop();
-            }    
+                label1.Left -= 110;
+                label1.Text = "Ati pierdut! Mai incearcati!";
+                timer3.Stop();
+                pictureBox1.Enabled = false;
+                pictureBox2.Enabled = false;
+                pictureBox3.Enabled = false;
+                pictureBox4.Enabled = false;
+                pictureBox5.Enabled = false;
+            }
+            label2.Text = "Timp ramas :" + t.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -39,86 +55,145 @@ namespace Diferente_poze
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (ok1 == 1 || t < 0)
-                return;
             pictureBox1.Image = Image.FromFile("d1.png");
-            nr++;
-            label1.Text = nr.ToString() + " / 5";
-            ok1 = 1;
-
-            if (nr == n)
+            if(ok1 == 0)
             {
-                label1.Left -= 80;
-                label1.Text = "You won! Congrats!";
-                timer1.Stop();
+                nr++;
+                if (nr < n)
+                    label1.Text = nr.ToString() + " / 8";
+                else
+                {
+                    label1.Left -= 100;
+                    label1.Text = "Ati castigat! Felicitari!";
+                    timer1.Stop();
+                }
+                ok1 = 1;
             }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (ok2 == 1 || t < 0)
-                return;
             pictureBox2.Image = Image.FromFile("d2.png");
-            nr++;
-            label1.Text = nr.ToString() + " / 5";
-            ok2 = 1;
-
-            if (nr == n)
+            if (ok2 == 0)
             {
-                label1.Left -= 80;
-                label1.Text = "You won! Congrats!";
-                timer1.Stop();
+                nr++;
+                if (nr < n)
+                    label1.Text = nr.ToString() + " / 8";
+                else
+                {
+                    label1.Left -= 100;
+                    label1.Text = "Ati castigat! Felicitari!";
+                    timer1.Stop();
+                }
+                ok2 = 1;
             }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            if (ok3 == 1 || t < 0)
-                return;
             pictureBox3.Image = Image.FromFile("d3.png");
-            nr++;
-            label1.Text = nr.ToString() + " / 5";
-            ok3 = 1;
-
-            if (nr == n)
+            if (ok3 == 0)
             {
-                label1.Left -= 80;
-                label1.Text = "You won! Congrats!";
-                timer1.Stop();
+                nr++;
+                if (nr < n)
+                    label1.Text = nr.ToString() + " / 8";
+                else
+                {
+                    label1.Left -= 100;
+                    label1.Text = "Ati castigat! Felicitari!";
+                    timer1.Stop();
+                }
+                ok3 = 1;
             }
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            if (ok4 == 1 || t < 0)
-                return;
             pictureBox4.Image = Image.FromFile("d4.png");
-            nr++;
-            label1.Text = nr.ToString() + " / 5";
-            ok4 = 1;
-
-            if (nr == n)
+            if (ok4 == 0)
             {
-                label1.Left -= 80;
-                label1.Text = "You won! Congrats!";
-                timer1.Stop();
+                nr++;
+                if (nr < n)
+                    label1.Text = nr.ToString() + " / 8";
+                else
+                {
+                    label1.Left -= 100;
+                    label1.Text = "Ati castigat! Felicitari!";
+                    timer1.Stop();
+                }
+                ok4 = 1;
             }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            if (ok5 == 1 || t < 0)
-                return;
             pictureBox5.Image = Image.FromFile("d5.png");
-            nr++;
-            label1.Text = nr.ToString() + " / 5";
-            ok5 = 1;
-
-            if (nr == n)
+            if(ok5 == 0)
             {
-                label1.Left -= 80;
-                label1.Text = "You won! Congrats!";
-                timer1.Stop();
+                nr++;
+                if (nr < n)
+                    label1.Text = nr.ToString() + " / 8";
+                else
+                {
+                    label1.Left -= 100;
+                    label1.Text = "Ati castigat! Felicitari!";
+                    timer1.Stop();
+                }
+                ok5 = 1;
+            }
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            pictureBox6.Image = Image.FromFile("d6.png");
+            if (ok6 == 0)
+            {
+                nr++;
+                if (nr < n)
+                    label1.Text = nr.ToString() + " / 8";
+                else
+                {
+                    label1.Left -= 100;
+                    label1.Text = "Ati castigat! Felicitari!";
+                    timer1.Stop();
+                }
+                ok6 = 1;
+            }
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            pictureBox7.Image = Image.FromFile("d7.png");
+            if (ok7 == 0)
+            {
+                nr++;
+                if (nr < n)
+                    label1.Text = nr.ToString() + " / 8";
+                else
+                {
+                    label1.Left -= 100;
+                    label1.Text = "Ati castigat! Felicitari!";
+                    timer1.Stop();
+                }
+                ok7 = 1;
+            }
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            pictureBox8.Image = Image.FromFile("d8.png");
+            if (ok8 == 0)
+            {
+                nr++;
+                if (nr < n)
+                    label1.Text = nr.ToString() + " / 8";
+                else
+                {
+                    label1.Left -= 100;
+                    label1.Text = "Ati castigat! Felicitari!";
+                    timer1.Stop();
+                }
+                ok8 = 1;
             }
         }
     }

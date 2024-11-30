@@ -10,15 +10,14 @@ D:\E\XIIA\Lazau Luca\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.cspr
 D:\E\XIIA\Lazau Luca\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.csproj.CoreCompileInputs.cache
 D:\E\XIIA\Lazau Luca\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.exe
 D:\E\XIIA\Lazau Luca\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.pdb
-D:\E\XIIA\Programming\C#\Diferente_poze\Diferente_poze\bin\Debug\Diferente_poze.exe.config
-D:\E\XIIA\Programming\C#\Diferente_poze\Diferente_poze\bin\Debug\Diferente_poze.exe
-D:\E\XIIA\Programming\C#\Diferente_poze\Diferente_poze\bin\Debug\Diferente_poze.pdb
-D:\E\XIIA\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.csproj.AssemblyReference.cache
-D:\E\XIIA\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.csproj.SuggestedBindingRedirects.cache
-D:\E\XIIA\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.Form1.resources
-D:\E\XIIA\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.Form2.resources
-D:\E\XIIA\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.Properties.Resources.resources
-D:\E\XIIA\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.csproj.GenerateResource.cache
-D:\E\XIIA\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.csproj.CoreCompileInputs.cache
-D:\E\XIIA\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.exe
-D:\E\XIIA\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.pdb
+D:\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.csproj.AssemblyReference.cache
+D:\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.Form1.resources
+D:\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.Form2.resources
+D:\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.Properties.Resources.resources
+D:\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.csproj.GenerateResource.cache
+D:\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.csproj.CoreCompileInputs.cache
+D:\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.exe
+D:\Programming\C#\Diferente_poze\Diferente_poze\obj\Debug\Diferente_poze.pdb
+D:\Programming\C#\Diferente_poze\Diferente_poze\bin\Debug\Diferente_poze.exe.config
+D:\Programming\C#\Diferente_poze\Diferente_poze\bin\Debug\Diferente_poze.exe
+D:\Programming\C#\Diferente_poze\Diferente_poze\bin\Debug\Diferente_poze.pdb

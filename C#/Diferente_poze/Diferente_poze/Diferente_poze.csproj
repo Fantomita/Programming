@@ -92,5 +92,29 @@
   <ItemGroup>
     <None Include="bin\Debug\pozajoc.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\d1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\d2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\d3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\d4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\d5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\d6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\d7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\d8.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

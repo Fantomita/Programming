@@ -18,7 +18,7 @@ session_start();
         <a href="index.php">Home</a>
         <a href="problems.php">Problems</a>
         <a href="about.php">About</a>
-        
+
         <?php
         // Check if the user is logged in and retrieve the user info from the database
         if (isset($_SESSION['user'])) {
@@ -36,7 +36,7 @@ session_start();
                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
                 if ($user && $user['is_admin'] == 1) {
-                    // If user is admin, show the Admin Panel link
+		    echo '<a href="videos.php">Videos</a>';
                     echo '<a href="/login/admin.php">Admin Panel</a>';
                 }
             } catch (PDOException $e) {
