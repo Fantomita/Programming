@@ -64,6 +64,7 @@ session_start();
     <nav>
         <a href="../index.php">Home</a>
         <a href="../problems.php">Problems</a>
+        <a href="../view_pdfs.php">View PDFs</a>
         <a href="../about.php">About</a>
 
         <?php

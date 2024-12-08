@@ -7,16 +7,17 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Competitive Programming Solutions</title>
+    <title>Personal Archive</title>
     <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
     <header>
-        <h1>Competitive Programming Solutions</h1>
+        <h1>Welcome to My Personal Archive</h1>
     </header>
     <nav>
         <a href="index.php">Home</a>
         <a href="problems.php">Problems</a>
+        <a href="view_pdfs.php">View PDFs</a>
         <a href="about.php">About</a>
 
         <?php
@@ -36,7 +37,7 @@ session_start();
                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
                 if ($user && $user['is_admin'] == 1) {
-		    echo '<a href="videos.php">Videos</a>';
+                    //echo '<a href="videos.php">Videos</a>';
                     echo '<a href="/login/admin.php">Admin Panel</a>';
                 }
             } catch (PDOException $e) {
@@ -54,8 +55,26 @@ session_start();
         <?php endif; ?>
     </nav>
     <div class="container">
-        <h2>Welcome to My Competitive Programming Site!</h2>
-        <p>Here you'll find solutions and write-ups for various competitive programming problems I've solved. Feel free to explore!</p>
+        <h2>Welcome to My Personal Archive!</h2>
+        <p>Explore my archive where I store various resources, from competitive programming solutions to other interesting things I've worked on or collected over time.</p>
+        <pre>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠤⠒⠒⠒⠒⠢⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠈⢦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⠀⠀⠀⠀⠀⡤⢄⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⡰⠃⠀⠀⠀⠀⠀⠀⠀⣼⡆⠀⢀⢀⠀⠸⡟⡇⠀⠀⡰⢾⢁⢸⣄⠀
+⠀⠀⠀⠀⠀⠀⠀⣰⠁⠀⠀⠀⠀⠀⠀⠀⠀⠙⠈⠀⠈⠉⠀⠀⠀⢸⠀⠀⡝⡆⠚⠠⣤⠇
+⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡀⠀⠙⢸⠧⣤⠃⠀
+⠀⠀⠀⠀⠀⢠⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣇⡀⣤⣼⠧⡀⠀⠀
+⠀⠀⠀⠀⢠⡏⠀⠀⠀⠀⡀⠀⠀⣠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⡇⠀⣀⣧⢸⠀⠀⠀
+⠀⠀⠀⢠⡞⠀⠀⠀⠀⠀⢟⠀⢀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠒⠉⠁⢸⡄⠀⠀⠀
+⠀⠀⢀⡞⠀⠀⠀⠀⠀⠀⢸⠀⡜⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠈⠀⠀⠀⠀
+⠀⣠⠏⠀⠀⠀⠀⠀⠀⠀⠈⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠀⠀⠀⠀⠀⠀⠀⠀
+⣰⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡏⠀⠀⠀⠀⠀⠀⠀⠀
+⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠁⠀⠀⠀⠀⠀⠀⠀⠀
+⠙⠶⠦⠤⠶⠖⠒⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡴⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⣷⠀⠀⠀⠀⢀⣤⠴⠶⣤⣀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠙⠲⠤⠖⠚⠉⠀⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        </pre>
     </div>
     <footer onclick="window.location.href='/games/index.php'">
         <p>Created by Luncan Vlad-Cosmin &copy; 2024</p>
