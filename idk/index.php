@@ -12,7 +12,7 @@ session_start();
 </head>
 <body>
     <header>
-        <h1>Welcome to My Personal Archive</h1>
+        <h1>My Personal Archive</h1>
     </header>
     <nav>
         <a href="index.php">Home</a>
