@@ -22,3 +22,14 @@ D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.csp
 D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.csproj.CoreCompileInputs.cache
 D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.exe
 D:\E\XIIA\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.pdb
+D:\Programming\C#\Spanzuratoare\Spanzuratoare\bin\Debug\Spanzuratoare.exe.config
+D:\Programming\C#\Spanzuratoare\Spanzuratoare\bin\Debug\Spanzuratoare.exe
+D:\Programming\C#\Spanzuratoare\Spanzuratoare\bin\Debug\Spanzuratoare.pdb
+D:\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.csproj.AssemblyReference.cache
+D:\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.Form1.resources
+D:\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.Form2.resources
+D:\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.Properties.Resources.resources
+D:\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.csproj.GenerateResource.cache
+D:\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.csproj.CoreCompileInputs.cache
+D:\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.exe
+D:\Programming\C#\Spanzuratoare\Spanzuratoare\obj\Debug\Spanzuratoare.pdb

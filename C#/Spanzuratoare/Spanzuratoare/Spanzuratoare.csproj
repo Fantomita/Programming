@@ -92,5 +92,8 @@
   <ItemGroup>
     <None Include="bin\Debug\hangman.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\s.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

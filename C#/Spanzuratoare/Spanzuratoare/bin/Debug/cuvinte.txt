@@ -1,4 +1,4 @@
-10
+15
 baschet
 volei
 fotbal
@@ -6,6 +6,11 @@ ski
 patinaj
 tenis
 polo
-batminton
+badminton
 golf
-formula1
+handbal
+ciclism
+scrimă
+surfing
+karate
+atletism

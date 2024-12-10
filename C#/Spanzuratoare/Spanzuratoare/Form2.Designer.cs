@@ -76,6 +76,8 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,9 +96,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Spanzuratoare.Properties.Resources.hangman1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 5);
+            this.pictureBox1.Image = global::Spanzuratoare.Properties.Resources.s;
+            this.pictureBox1.Location = new System.Drawing.Point(30, -18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(569, 539);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -625,12 +627,38 @@
             this.label46.TabIndex = 50;
             this.label46.Text = "_";
             // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Courier New", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(657, 182);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(526, 146);
+            this.label47.TabIndex = 51;
+            this.label47.Text = "Ai pierdut!\r\nMai încearcă!";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label47.Visible = false;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Courier New", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(669, 182);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(488, 146);
+            this.label48.TabIndex = 52;
+            this.label48.Text = "Ai câștigat!\r\nFelicitări!";
+            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label48.Visible = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(1248, 665);
+            this.Controls.Add(this.label48);
+            this.Controls.Add(this.label47);
             this.Controls.Add(this.label46);
             this.Controls.Add(this.label45);
             this.Controls.Add(this.label44);
@@ -737,5 +765,7 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
     }
 }
