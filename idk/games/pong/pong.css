@@ -1,0 +1,62 @@
+body {
+    background-color: #121212;
+    font-family: 'Courier New', Courier, monospace;
+    color: #eaeaea;
+    margin: 0;
+    padding: 0;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ff6347;
+    margin-bottom: 10px;
+}
+
+#pongGame {
+    border: 2px solid #58a6ff;
+    background-color: #1e1e1e;
+    display: block;
+    margin-top: 10px;
+}
+
+#score {
+    font-size: 1.5rem;
+    color: #58a6ff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+button {
+    background: linear-gradient(145deg, #58a6ff, #4f8aeb);
+    color: #f0f0f0;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    display: block;
+    width: auto;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #4f8aeb, #58a6ff);
+    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+    button {
+        padding: 15px 25px;
+        font-size: 1.2rem;
+    }
+}
