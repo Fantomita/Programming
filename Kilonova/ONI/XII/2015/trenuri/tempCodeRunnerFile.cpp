@@ -1,0 +1,2 @@
+
+    ifstream cin("trenuri.in");
